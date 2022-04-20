@@ -16,6 +16,11 @@ import java.util.List;
 @RequestMapping("/users")
 class UserController {
 
+    @GetMapping("/get/{id}")
+    public UserDetail getUsersFront(@PathVariable Long id) {
+        return new UserDetail(id, "name", "grade", "Some school", "City");
+    }
+
     @GetMapping("/{id}")
     public UserDetail getUsers(@PathVariable Long id) {
         return new UserDetail(id, "name", "grade", "Some school", "City");

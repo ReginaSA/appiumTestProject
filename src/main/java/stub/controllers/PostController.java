@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PostController {
-    @PostMapping("/post/element")
+    @PostMapping("/post")
     public @ResponseBody
     ResponseEntity postElement() {
-        return new ResponseEntity("", HttpStatus.OK);
+        return new ResponseEntity("element", HttpStatus.OK );
     }
 }
